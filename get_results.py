@@ -16,6 +16,7 @@ import datetime
 #===============================================================================
 # 3rd Party Modules
 #===============================================================================
+import config
 from lxml import etree
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
@@ -87,10 +88,10 @@ def do_login(driver):
         if login:
             elem = driver.find_element_by_xpath('//input[@type="email"]')
             elem.click()
-            elem.send_keys('garingribbon@hotmail.com')
+            elem.send_keys()
             elem = driver.find_element_by_xpath('//input[@type="password"]')
             elem.click()
-            elem.send_keys('GwlSH25h8fc!')
+            elem.send_keys()
             elem = driver.find_element_by_xpath('//button')
             elem.click()
         driver.switch_to_default_content()
