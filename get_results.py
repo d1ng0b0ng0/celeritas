@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 
 '''
-Created on 01 Jan 2001
+Created on 01 Jan 2017
 
 @author: deus
 '''
@@ -88,10 +88,10 @@ def do_login(driver):
         if login:
             elem = driver.find_element_by_xpath('//input[@type="email"]')
             elem.click()
-            elem.send_keys()
+            elem.send_keys(config.USER)
             elem = driver.find_element_by_xpath('//input[@type="password"]')
             elem.click()
-            elem.send_keys()
+            elem.send_keys(config.PASS)
             elem = driver.find_element_by_xpath('//button')
             elem.click()
         driver.switch_to_default_content()
