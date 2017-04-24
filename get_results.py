@@ -1,4 +1,4 @@
-#!/home/bohr/Development/python/news/bin/python3
+#!/home/bohr/Development/python/celeritas/bin/python3
 # -*- coding: utf-8 -*-
 
 '''
