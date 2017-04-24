@@ -100,7 +100,7 @@ def init_driver():
     options = webdriver.ChromeOptions()
     options.add_argument('/home/bohr/.config/chromium/Default')
     options.add_argument('--disable-infobars')
-    driver = webdriver.Chrome('/home/bohr/Development/python/dissertation/chromedriver')
+    driver = webdriver.Chrome('/home/bohr/Development/python/celeritas/chromedriver')
 
     return driver
 
