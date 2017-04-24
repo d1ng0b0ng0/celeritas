@@ -4,7 +4,7 @@
 '''
 Created on 01 Jan 2017
 
-@author: deus
+@author: bohr
 '''
 #===============================================================================
 # Standard Modules
@@ -32,7 +32,6 @@ def wait_click(driver, wait, xpath):
 
     try:
         element = WebDriverWait(driver, wait).until(EC.presence_of_element_located((By.XPATH, xpath)))
-        #print('Found clickable element...')
         click(driver, xpath)
     except:
         print('Failed on xpath ' + xpath)
@@ -44,7 +43,6 @@ def wait_post(driver, wait, xpath, keys):
 
     try:
         element = WebDriverWait(driver, wait).until(EC.presence_of_element_located((By.XPATH, xpath)))
-        #print('Found postable element...')
         post(driver, xpath, keys)
     except:
         driver.quit()
@@ -55,8 +53,7 @@ def click(driver, xpath):
 
     elem = driver.find_element_by_xpath(xpath)
     elem.click()
-    #print('Clicked on element...')
-
+    
     return
 
 def post(driver, xpath, keys):
@@ -65,8 +62,7 @@ def post(driver, xpath, keys):
     elem.click()
     elem.clear()
     elem.send_keys(keys)
-    #print('Posted to element...')
-
+    
     return
 
 def get_handles(driver):
